@@ -10,7 +10,7 @@
     "formik": "^2.2.9",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.6.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "styled-system": "^5.1.5",
@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +44,14 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.25.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "prop-types": "^15.8.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

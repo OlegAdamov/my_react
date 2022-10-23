@@ -1,14 +1,18 @@
 import PaintingList from 'components/PaintingList';
-import Section from 'components/Section';
 import paintings from './components/paintings.json';
+import { EventBoard } from 'components/EventBoard/EventBoard';
+import { PageTitle } from 'components/PageTitle/PageTitle';
+import Section from 'components/Section';
+import upcomingEvents from './components/upcoming-events.json';
 
 export default function App() {
   return (
-    <div>
-      <Section title="Top Week">
+    <>
+      <Section title="My React">
         <PaintingList items={paintings} />
+        <PageTitle text="24th Core Worlds Coalition Conference" />
+        <EventBoard events={upcomingEvents} />
       </Section>
-      <Section />
-    </div>
+    </>
   );
 }

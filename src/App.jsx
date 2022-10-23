@@ -1,5 +1,5 @@
-import PaintingList from 'components/PaintingList';
-import paintings from './components/paintings.json';
+import PaintingList from 'components/PaintingList/PaintingList';
+import paintings from './components/PaintingList/paintings.json';
 import { EventBoard } from 'components/EventBoard/EventBoard';
 import { PageTitle } from 'components/PageTitle/PageTitle';
 import Section from 'components/Section';

@@ -12,10 +12,12 @@ export default function App() {
     <>
       <Section title="My React">
         <PaintingList items={paintings} />
-        <PageTitle text="24th Core Worlds Coalition Conference" />
-        <EventBoard events={upcomingEvents} />
         <Counter initialValue={0} />
       </Section>
+      <Container>
+        <PageTitle text="24th Core Worlds Coalition Conference" />
+        <EventBoard events={upcomingEvents} />
+      </Container>
     </>
   );
 }

@@ -42,14 +42,14 @@ export const Chip = styled.span`
   border-radius: 4px;
   text-transform: uppercase;
   color: #fff;
-  background-color: ${props => {
-    switch (props.eventType) {
+  background-color: ${({ eventType, theme }) => {
+    switch (eventType) {
       case 'free':
-        return 'var(--color-green)';
+        return theme.colors.green;
       case 'paid':
-        return 'var(--color-blue)';
+        return theme.colors.blue;
       case 'vip':
-        return 'var(--color-red)';
+        return theme.colors.red;
       default:
         return '#000';
     }

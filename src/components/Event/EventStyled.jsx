@@ -2,16 +2,18 @@ import styled from '@emotion/styled';
 
 export const Card = styled.div`
   position: relative;
-  border: 2px dashed black;
-  padding: 8px;
-  border-radius: 4px;
+  border: ${props =>
+    `${props.theme.borders.dashed} ${props.theme.colors.black}`};
+  // padding: ${props => props.theme.spacing * 2}px;
+  padding: ${props => props.theme.spacing(2)};
+  border-radius: ${props => `${props.theme.radii.sm}`};
 `;
 
 export const EventName = styled.h2`
   margin-top: 0;
-  font-size: 14px;
+  font-size: ${props => `${props.theme.fontSizes.s}`};
   line-height: 24px;
-  font-weight: 700;
+  font-weight: ${props => `${props.theme.fontWeights.bold}`};
   letter-spacing: 0.5px;
   text-transform: uppercase;
 `;
@@ -20,26 +22,26 @@ export const Info = styled.p`
   display: flex;
   align-items: center;
   margin-top: 0;
-  margin-bottom: 8px;
-  color: var(--color-primary-text);
+  margin-bottom: ${props => props.theme.spacing(2)};
+  color: ${props => `${props.theme.colors.primaryText}`};
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: ${props => `${props.theme.fontWeights.normal}`};
   letter-spacing: 0.25px;
 
   svg {
     display: block;
-    margin-right: 8px;
-    color: var(--color-secondary-text);
+    margin-right: ${props => props.theme.spacing(2)};
+    color: ${props => `${props.theme.colors.secondaryText}`};
   }
 `;
 
 export const Chip = styled.span`
   position: absolute;
-  top: 4px;
-  right: 4px;
-  padding: 4px 8px;
-  border-radius: 4px;
+  top: ${props => props.theme.spacing(1)};
+  right: ${props => props.theme.spacing(1)};
+  padding: ${props => props.theme.spacing(1, 2)};
+  border-radius: ${props => `${props.theme.radii.sm}`};
   text-transform: uppercase;
   color: #fff;
   background-color: ${({ eventType, theme }) => {

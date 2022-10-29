@@ -4,10 +4,11 @@ import React from 'react';
 import { EventBoard } from '../EventBoard/EventBoard';
 // import { PageTitle } from '../PageTitle/PageTitle';
 import Section from '../Section';
-
+import { HiArchive, HiArrowCircleUp, HiBriefcase } from 'react-icons/hi';
 import upcomingEvents from '../upcoming-events.json';
 // import Counter from '../Counter/Counter';
 import { Container } from './App.styled';
+import { Button } from './Button';
 // import Dropdown from 'components/Dropdown/Dropdown';
 
 const colorPickerOptions = [
@@ -32,8 +33,14 @@ export default function App() {
         <EventBoard events={upcomingEvents} />
       </Container>
       {/* <Dropdown /> */}
-
       {/* <ColorPicker options={colorPickerOptions} /> */}
+      <Button icon={HiArchive}>Search</Button>
+      <Button icon={HiArrowCircleUp}>Filter</Button>
+      <Button icon={HiBriefcase}>Show Modal</Button>
+      <Button type="submit">LogIn</Button>
+      <Button type="submit" disabled>
+        LogOff
+      </Button>
     </>
   );
 }
